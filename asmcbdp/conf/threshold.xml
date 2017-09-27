@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--上传jar文件到HDFS上的目录-->
+     <property>
+      <name>jarLocation</name>
+      <value>hdfs://192.168.12.9:8020/apps/spark/asmcbdp.jar</value>
+    </property>
+   <!--jar文件生成目录-->
+    <property>
+      <name>jarGenPath</name>
+      <value>d:\yf\ljr\asmcbdp.jar</value>
+    </property>
+
+     <property>
+      <name>warehouseLocation</name>
+      <value>hdfs://192.168.12.9:8020/apps/spark/warehouse</value>
+    </property>
+    <property>
+      <name>sparkAddress</name>
+      <value>yarn-client</value>
+    </property>
+    <property>
+        <name>hdfsAddress</name>
+        <value>hdfs://192.168.12.9:8020</value>
+    </property>
+
+   <property>
+      <name>esNodes</name>
+      <value>192.168.12.35:9200</value>
+    </property>
+    <property>
+      <name>esPort</name>
+      <value>9200</value>
+    </property>
+    <property>
+      <name>user</name>
+      <value>root</value>
+    </property>
+    <!-- es配置 -->
+
+    <!-- jdbc配置 -->
+    <property>
+        <name>jdbcUrl</name>
+        <value>jdbc:mysql://192.168.12.125:3306/gov01_v3?useUnicode=true&amp;characterEncoding=utf-8 </value>
+        <!--value>jdbc:mysql://192.168.12.12:3306/G01?useUnicode=true&amp;characterEncoding=utf-8 </value -->
+    </property>
+    <property>
+        <name>jdbcUser</name>
+        <value>root</value>
+    </property>
+    <property>
+        <name>jdbcPwd</name>
+        <value>123</value>
+    </property>
+
+    <property>
+        <name>executeMemory</name>
+        <value>5g</value>
+    </property>
+
+    <!-- spark steaming 配置  -->
+    <!-- kafa配置 -->
+     <property>
+       <name>kfHosts</name>
+       <value>master.xdbd:19092,slave1.xdbd:19092,slave2.xdbd:19092,slave3.xdbd:19092</value>
+     </property>
+     <property>
+       <name>flumeTopicName</name>
+       <value>flumeLogTopic</value>
+     </property>
+     <property>
+       <name>nimbusHost</name>
+       <value></value>
+     </property>
+
+      <property>
+        <name>readDataInterval</name>
+        <value>5</value>
+      </property>
+
+
+
+
+    <property>
+      <name>stat.inputOutPath</name>
+      <value>es:bank/account,es:/stat/bank</value>
+    </property>
+     <property>
+      <name>stat.inputOut.paraLen</name>
+      <value>2</value>
+    </property>
+     <property>
+      <name>stat.inputOut.hintMsg</name>
+      <value>Usage:asmc汇总 [输入目录]  [输出目录]</value>
+    </property>
+
+
+
+     <!--输入文件的换行分隔符-->
+     <property>
+      <name>inputDelimiter</name>
+      <value></value>
+    </property>
+     <!--输入文件的字段分隔符-->
+     <property>
+      <name>inputSeparator</name>
+      <value>#|#</value>
+    </property>
+    <!--输出文件的字段分隔符-->
+    <property>
+      <name>outputSeparator</name>
+      <value>#|#</value>
+    </property>
+
+    <property>
+        <name>parseWord.inputSeparator</name>
+        <value>$</value>
+    </property>
+
+
+     <!--reduce任务数量符-->
+    <property>
+      <name>reduceTaskNum</name>
+      <value>8</value>
+    </property>
+
+
+
+</configuration>
